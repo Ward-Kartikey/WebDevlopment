@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase - Responsive Navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #18697b;
+            padding: 0 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            height: 70px;
+        }
+
+        .logo {
+            color: #100c0c;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #131212;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+
+        .nav-links a:hover {
+            color: #ff6b6b;
+        }
+
+        .right-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cart-login {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cart-login a {
+            color: #0f0e0e;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .cart-login a:hover {
+            color: #ff6b6b;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #0a0a0a;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: #bfb4b4;
+                flex-direction: column;
+                gap: 0;
+                padding: 20px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 12px 0;
+                border-bottom: 1px solid #0f0e0e;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .cart-login {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                height: 60px;
+            }
+
+            .logo {
+                font-size: 22px;
+            }
+
+            .cart-login {
+                gap: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="#" class="logo">E-Bay</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="right-section">
+                <div class="cart-login">
+                    <a href="#cart">Cart</a>
+                    <a href="#login">Login</a>
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
