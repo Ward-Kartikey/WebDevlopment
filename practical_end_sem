@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Property</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .header{
+            height: 50px;
+            width: 100%;
+            background-color: black;
+            margin: 4px;
+        }
+        div h2 {
+            color: white;
+            font-size: larger;
+            line-height: 50px;
+        
+        }
+        .main{
+            height: 50%;
+            width: 50% ;
+            background-color:yellow;
+        }
+        .main h2{
+            color: black;
+            font:x-large;
+        }
+        input{
+            display: block;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+       <center><h2>E-bay</h2></center>
+    </div>
+   <center> 
+ <div class="main">
+   <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/687093/01/mod01/fnd/IND/fmt/png/Men's-Slim-Fit-Polo-T-shirt" alt="T-shirt shopping" height="25%" width="50%">
+ <h2>Puma fitness black T-shirt</h2>
+ <h3>*limited edition*</h3>
+ <span>Rs 5,000/-</span>
+ <input type="button" value="Add to Cart">
+    </div></center>
+</body>
+</html>
